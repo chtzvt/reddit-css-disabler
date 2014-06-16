@@ -1,0 +1,17 @@
+{
+  "name": "Reddit CSS Disabler",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Automatically disables custom subreddit CSS sitewide.",
+  "author": "Charlton Trezevant",
+    "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+             "128": "icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/r/*"],
+      "js": ["jquery.js", "nocss.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
